@@ -16,12 +16,12 @@ def runGui():
 				runHelpWindowGUI();
 				pass
 			mainframe = tk.Frame(self,bg="orange",width=640,height=480)
-			mainframe.grid(row=1,column=0)
+			mainframe.grid(row=0,column=0)
 			mainframe.pack()
 			#first layer
 			frame1 = tk.Frame(mainframe,width=640)
 			frame1.grid(row=0,column=0,columnspan=60)
-			path = tk.Entry(frame1,width=100)
+			path = tk.Entry(frame1,width=101)
 			path.grid(row=0,column=0)
 			helpButton = tk.Button(frame1,text="Help",borderwidth=.003,command=openHelpWindow)
 			helpButton.grid(row=0,column=1)
@@ -30,8 +30,8 @@ def runGui():
 			frame2.grid(row=1,column=0,sticky="nsew",columnspan=60)
 
 
-			listbox = tk.Listbox(frame2,height=29,width=200)
-			listbox.grid(row=0,column=0,sticky=(N,W,E,S),columnspan=60)
+			listbox = tk.Listbox(frame2,height=29,width=106)
+			listbox.grid(row=0,column=0,sticky=(N,W),columnspan=900)
 
 			#scrollbar maybe in future, main idea is to not use mouse with this app
 			#scrollbar = tk.Scrollbar(frame2,orient=VERTICAL,command=listbox.yview)
@@ -44,7 +44,7 @@ def runGui():
 	root["bg"] = "grey"
 	app = MainWindow(master=root)
 	app.mainloop()
-	print("done?")
+	print("Main Window Closed")
 	
 
 #reminder = building ui inside frame1
