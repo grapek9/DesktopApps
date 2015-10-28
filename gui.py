@@ -1,6 +1,7 @@
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from helpWindow import *
+
 class mainWindow(QWidget):
 	def __init__(self):
 		super(mainWindow,self).__init__()
